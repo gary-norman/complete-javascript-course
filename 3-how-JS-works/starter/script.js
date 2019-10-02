@@ -101,20 +101,21 @@ var john = {
         innerFunction();
         */
     }
-}
+};
 
-john.calculateAge();
+//john.calculateAge();
 
 var mike = {
     name: 'Mike',
     yearOfBirth: 1984,
+    calculateAge: john.calculateAge
 
 };
 
 // method borrowing
-mike.calculateAge = john.calculateAge;
-mike.calculateAge();
-console.log(mike.name + ' is ' + mike.calculateAge());
+//mike.calculateAge = john.calculateAge;
+//mike.calculateAge();
+console.log(`${mike.name} is ${mike.calculateAge()}`);
 
 
 
